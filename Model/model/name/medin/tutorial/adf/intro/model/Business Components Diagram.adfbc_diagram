@@ -337,7 +337,7 @@
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
             <property xmi:type='DI:Property' key='font' value='SansSerif,plain,11'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView1::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='148.0'/>
           </contained>
           <contained xmi:type='DI:GraphNode' xmi:id='iddf0b7614-d534-45f7-bd32-0424e41aa47e'>
@@ -353,7 +353,7 @@
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
             <property xmi:type='DI:Property' key='font' value='SansSerif,plain,11'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView1::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='136.0'/>
           </contained>
           <contained xmi:type='DI:GraphNode' xmi:id='id854ac09f-efb9-476e-b243-7e671200fff4'>
@@ -401,7 +401,7 @@
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
             <property xmi:type='DI:Property' key='font' value='SansSerif,plain,11'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView3::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesInDepartment::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='136.0'/>
           </contained>
           <contained xmi:type='DI:GraphEdge' xmi:id='id465792f0-d97b-4741-897e-ad38c1e63f1d' anchor='id354633bf-578d-4c64-b648-278ff13f981d id5219db37-f589-4387-8473-b6b62046a838'>
