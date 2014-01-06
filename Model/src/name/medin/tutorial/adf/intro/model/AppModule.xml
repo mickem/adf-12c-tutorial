@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="name.medin.tutorial.adf.intro.model.DeptMgrFkLink"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView1"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView1"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpDeptFkLink"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView1"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView3"
+    Reversed="false"/>
+</AppModule>
