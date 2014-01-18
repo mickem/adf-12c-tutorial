@@ -9,7 +9,13 @@
   DBObjectType="table"
   DBObjectName="EMPLOYEES"
   AliasName="Employees"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="name.medin.tutorial.adf.intro.model.EmployeesImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="EmployeeId"
     IsNotNull="true"
@@ -59,6 +65,8 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="25"/>
     </DesignTime>
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA[(FirstName==null?"firstname":FirstName) + "." + (LastName==null?"lastname":LastName) + "@conencta.se"]]></TransientExpression>
   </Attribute>
   <Attribute
     Name="PhoneNumber"
@@ -79,7 +87,17 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="EMPLOYEES"/>
+    TableName="EMPLOYEES">
+    <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="name.medin.tutorial.adf.intro.model.Employees.HireDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="name.medin.tutorial.adf.intro.model.Employees.HireDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="JobId"
     IsNotNull="true"
@@ -101,7 +119,32 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES"/>
+    TableName="EMPLOYEES">
+    <validation:PreDefinedValidationBean
+      Name="SalaryPrecisionScale0"
+      ResId="name.medin.tutorial.adf.intro.model.Employees.Salary_Rule_0"
+      Description="Precision : (8,2)"
+      ValName="Precision : (8,2)"
+      Subtype="PRECISION_SCALE"/>
+    <validation:ExpressionValidationBean
+      Name="MaximumSalaryRule"
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:MsgIds>
+        <validation:Item
+          Value="error.maximu.salary"/>
+      </validation:MsgIds>
+      <validation:ResExpressions>
+        <validation:Expression
+          Name="1"><![CDATA[source.hints.Salary.label]]></validation:Expression>
+        <validation:Expression
+          Name="2"><![CDATA[newValue]]></validation:Expression>
+        <validation:Expression
+          Name="3"><![CDATA[JobId == "IT_PROG" ? 50000 : 50]]></validation:Expression>
+      </validation:ResExpressions>
+      <validation:TransientExpression><![CDATA[JobId == "IT_PROG" ? newValue >= 50000 : newValue >= 50]]></validation:TransientExpression>
+    </validation:ExpressionValidationBean>
+  </Attribute>
   <Attribute
     Name="CommissionPct"
     Precision="2"
@@ -255,4 +298,36 @@
       <Item Value="name.medin.tutorial.adf.intro.model.Employees.ManagerId"/>
     </AttrArray>
   </Key>
+  <validation:ExpressionValidationBean
+    Name="ValidateEmail"
+    Description="Validate the email address"
+    OperandType="EXPR"
+    Inverse="false">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="FirstName"/>
+      <validation:Item
+        Value="Email"/>
+      <validation:Item
+        Value="LastName"/>
+    </validation:OnAttributes>
+    <validation:OnCondition><![CDATA[FirstName != null && LastName != null]]></validation:OnCondition>
+    <validation:MsgIds>
+      <validation:Item
+        Value="error.email"/>
+    </validation:MsgIds>
+    <validation:ResExpressions>
+      <validation:Expression
+        Name="1"><![CDATA[source.hints.Email.label]]></validation:Expression>
+      <validation:Expression
+        Name="2"><![CDATA[sourceRow.FirstName]]></validation:Expression>
+      <validation:Expression
+        Name="3"><![CDATA[sourceRow.LastName]]></validation:Expression>
+    </validation:ResExpressions>
+    <validation:TransientExpression><![CDATA[Email == (FirstName + "." + LastName + "@connecta.se")]]></validation:TransientExpression>
+  </validation:ExpressionValidationBean>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

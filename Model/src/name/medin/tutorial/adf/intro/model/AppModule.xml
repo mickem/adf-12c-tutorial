@@ -19,6 +19,12 @@
   <ViewUsage
     Name="EmployeesInDepartment"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
+  <ViewUsage
+    Name="JobsView"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.JobsView"/>
+  <ViewUsage
+    Name="EmployeesForJob"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
   <ViewLinkUsage
     Name="EmpManagerFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"
@@ -30,5 +36,11 @@
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpDeptFkLink"
     SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView"
     DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesInDepartment"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="JobEmpFkLink1"
+    ViewLinkObjectName="name.medin.tutorial.adf.intro.model.JobEmpFkLink"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.JobsView"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesForJob"
     Reversed="false"/>
 </AppModule>
