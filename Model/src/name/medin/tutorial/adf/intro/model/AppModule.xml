@@ -25,6 +25,9 @@
   <ViewUsage
     Name="EmployeesForJob"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
+  <ViewUsage
+    Name="CoolJobsView1"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.CoolJobsView"/>
   <ViewLinkUsage
     Name="EmpManagerFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"

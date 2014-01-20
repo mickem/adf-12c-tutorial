@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CoolJobsView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  ComponentClass="name.medin.tutorial.adf.intro.model.CoolJobsViewImpl"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="name.medin.tutorial.adf.intro.model.CoolJobsView_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAttribute
+    Name="JobId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.String"
+    ColumnType="$none$"/>
+  <ViewAttribute
+    Name="Name"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    SQLType="VARCHAR"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="JobId"/>
+  </AttrArray>
+  <StaticList
+    Rows="2"
+    Columns="2"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

@@ -192,13 +192,55 @@
             <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
             <value n="profileName" v="ADFTutorial_Project1_adflib"/>
          </hash>
+         <hash n="myjar">
+            <value n="adflib-connectionDetails" v="true"/>
+            <value n="adflib-nonReusablesError" v="false"/>
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="true"/>
+            </hash>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                        <hash>
+                           <value n="type" v="5"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="WEB-INF/classes/**"/>
+                              <value n="type" v="1"/>
+                           </hash>
+                           <hash>
+                              <value n="pattern" v="**"/>
+                              <value n="type" v="0"/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/myjar.jar"/>
+            <hash n="LibraryDependencies"/>
+            <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
+            <value n="profileName" v="myjar"/>
+         </hash>
       </hash>
       <list n="profileList">
          <string v="ADFTutorial_Project1_adflib"/>
          <string v="ADFTutorial_Model"/>
+         <string v="myjar"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
+      <value n="goalToRun" v="package"/>
       <url n="pomfileURL" path="pom.xml"/>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
