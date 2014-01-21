@@ -325,7 +325,7 @@
       <validation:Expression
         Name="3"><![CDATA[sourceRow.LastName]]></validation:Expression>
     </validation:ResExpressions>
-    <validation:TransientExpression><![CDATA[Email == (FirstName + "." + LastName + "@connecta.se")]]></validation:TransientExpression>
+    <validation:TransientExpression><![CDATA[Email.equalsIgnoewCase(FirstName + "." + LastName + "@connecta.se")]]></validation:TransientExpression>
   </validation:ExpressionValidationBean>
   <ResourceBundle>
     <PropertiesBundle
