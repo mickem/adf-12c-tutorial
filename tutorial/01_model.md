@@ -114,14 +114,14 @@ You will need to translate that into a proper requirement first.
 - (C) Add a drop down for department in the new employee dialog.
 - (C,D) Add a drop down for the job field in the new employee dialog.
 - (E) Add a value which shows number of direct reports (DirectReports) by selecting the number of employees which has this employee as manager. 
-- (F) Add the ability to quickly filter all employees which is not managers.
+- (F) Add the ability to quickly filter all employees which has no manager.
 - (F) Add the ability to quickly filter all employees which has no direct reports.
 - Create a view link to list all employers for each job.
 - Add a field which shows the Commission in $ (not %) based on Salary and Commission for the user.
 
 ### Hints (dont peak)
 
-* HINT A.1: The field is required, but can easily be hidden from the user by using the database sequence EMPLOYEE_SEQ.
+* HINT A.1: The field is required, but can easily be hidden from the user by using the database sequence EMPLOYEES_SEQ.
 * HINT B.1: http://en.wikipedia.org/wiki/Gravatar don?t forget to change one users email to one which has a valid gravtar.
 * HINT B.2: The algorithm can easily be found online as a one-liner.
 * HINT C.1: Think LOV
