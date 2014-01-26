@@ -8,36 +8,27 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
-    Name="DepartmentsView1"
+    Name="DepartmentsView"
     ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"/>
   <ViewUsage
-    Name="EmployeesView1"
+    Name="EmployeesView"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
   <ViewUsage
-    Name="DepartmentsView2"
-    ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"/>
-  <ViewUsage
-    Name="EmployeesView2"
+    Name="DirectReports"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
   <ViewUsage
-    Name="EmployeesView3"
+    Name="EmployeesInDepartment"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
-  <ViewLinkUsage
-    Name="DeptMgrFkLink1"
-    ViewLinkObjectName="name.medin.tutorial.adf.intro.model.DeptMgrFkLink"
-    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView1"
-    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView2"
-    Reversed="false"/>
   <ViewLinkUsage
     Name="EmpManagerFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"
-    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView1"
-    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView2"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DirectReports"
     Reversed="false"/>
   <ViewLinkUsage
     Name="EmpDeptFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpDeptFkLink"
-    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView1"
-    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView3"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesInDepartment"
     Reversed="false"/>
 </AppModule>

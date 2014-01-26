@@ -337,7 +337,7 @@
             <property xmi:type='DI:Property' key='lineColor' value='#a5a5a5'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView1::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='148.0'/>
           </contained>
           <contained xmi:type='DI:GraphNode' xmi:id='id312cbf23-31f0-4b2b-96eb-7d4c468e4ed2'>
@@ -353,7 +353,7 @@
             <property xmi:type='DI:Property' key='lineColor' value='#a5a5a5'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView1::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='136.0'/>
           </contained>
           <contained xmi:type='DI:GraphNode' xmi:id='id6a6b60e3-58a7-4dd2-8a1a-16723ebd3baa'>
@@ -385,7 +385,7 @@
             <property xmi:type='DI:Property' key='lineColor' value='#a5a5a5'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView2::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.DirectReports::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='136.0'/>
           </contained>
           <contained xmi:type='DI:GraphNode' xmi:id='idc3b3cd74-cb0f-4b98-9623-6d9375f33074'>
@@ -401,7 +401,7 @@
             <property xmi:type='DI:Property' key='lineColor' value='#a5a5a5'/>
             <property xmi:type='DI:Property' key='fillColor' value='#a5e7ff'/>
             <property xmi:type='DI:Property' key='showPackage' value='false'/>
-            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesView3::ViewObjectInstance' presentation='COMPACT'/>
+            <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='BM:::name.medin.tutorial.adf.intro.model.AppModule.EmployeesInDepartment::ViewObjectInstance' presentation='COMPACT'/>
             <size xmi:type='DI:Dimension' height='40.0' width='136.0'/>
           </contained>
           <contained xmi:type='DI:GraphEdge' xmi:id='id63d49702-4db1-43c8-b0c2-8309571f98e0' anchor='id838c723b-61ea-42bc-a0f6-b04e6be8f690 id20ebb5b4-125f-49ab-9064-831f4c4d4a6c'>
