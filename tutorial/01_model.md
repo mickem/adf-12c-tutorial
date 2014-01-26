@@ -64,11 +64,11 @@ git config --global credential.helper cache
 
 ### Questions
 
-7.	Why do we have application specific connections?
-8.	What's the difference between Entity-based View objects and Query-based view objects?
-9.	What is an application module?
-10.	What does the application module source file contain?
-11.	What do we have now in terms of functionality?
+1.	Why do we have application specific connections?
+2.	What's the difference between Entity-based View objects and Query-based view objects?
+3.	What is an application module?
+4.	What does the application module source file contain?
+5.	What do we have now in terms of functionality?
 
 ## 3. Cleaning up the Model
 
@@ -84,9 +84,9 @@ Thus we will need to clean up the default relations.
  
 ### Questions
 
-12.	How does this affect our code?
-13.	What's the effect of these names are they important?
-14.	Would it be possible to get better names from the database?
+1.	How does this affect our code?
+2.	What's the effect of these names are they important?
+3.	Would it be possible to get better names from the database?
 
 ## 4. Playing with the model
 
@@ -96,8 +96,8 @@ Click run the Application Module and don't forget the password for the database 
  
 ### Questions
 
-15.	Why is this one of the best features of ADF?
-16.	What is not possible to test using this UI?
+1.	Why is this one of the best features of ADF?
+2.	What is not possible to test using this UI?
 
 ## 5. Building the model
 
@@ -133,13 +133,13 @@ You will need to translate that into a proper requirement first.
 
 ### Questions
 
-17.	Where (Entity object or View) do we put custom attributes and why?
-18.	Where (Entity object or View) do we put default values and why?
-19.	Where (Entity object or View) do we put LOVs and why? 
-20.	What's bad about where we placed the code for the id-sequence value? 
-21.	When do you use the view link?
-22.	When do you use the view accessor?
-23.	What's the difference between a view link and a view accessor?
+1.	Where (Entity object or View) do we put custom attributes and why?
+2.	Where (Entity object or View) do we put default values and why?
+3.	Where (Entity object or View) do we put LOVs and why?
+4.	What's bad about where we placed the code for the id-sequence value? 
+5.	When do you use the view link?
+6.	When do you use the view accessor?
+7.	What's the difference between a view link and a view accessor?
 
 ## 6. Validating the model
 
@@ -159,7 +159,7 @@ The next step is to turn the database interface into a working usable model. Ple
 
 ### Questions
 
-24.	Where (Entity object or View) do we put constraints and why?
-25.	Why should you not use the text ?salary? in the error message for the validation rule?
-26.	What should you use instead?
+1.	Where (Entity object or View) do we put constraints and why?
+2.	Why should you not use the text ?salary? in the error message for the validation rule?
+3.	What should you use instead?
 
