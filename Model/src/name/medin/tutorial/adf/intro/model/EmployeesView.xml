@@ -21,6 +21,75 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="Managers"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Departments"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Jobs"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.AllJobsView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ManagerId"
+    ListVOName="Managers"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ManagerId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DepartmentId"
+    ListVOName="Departments"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="DepartmentName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_JobId"
+    ListVOName="Jobs"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="JobId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="JobId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="JobTitle"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Employees"
     Entity="name.medin.tutorial.adf.intro.model.Employees"/>
@@ -71,7 +140,15 @@
     PrecisionRule="true"
     EntityAttrName="JobId"
     EntityUsage="Employees"
-    AliasName="JOB_ID"/>
+    AliasName="JOB_ID"
+    LOVName="LOV_JobId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Salary"
     PrecisionRule="true"
@@ -89,13 +166,101 @@
     PrecisionRule="true"
     EntityAttrName="ManagerId"
     EntityUsage="Employees"
-    AliasName="MANAGER_ID"/>
+    AliasName="MANAGER_ID"
+    LOVName="LOV_ManagerId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DepartmentId"
     PrecisionRule="true"
     EntityAttrName="DepartmentId"
     EntityUsage="Employees"
-    AliasName="DEPARTMENT_ID"/>
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Gravatar"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA["http://gravatar.com/avatar/"+new BigInteger(1, java.security.MessageDigest.getInstance("MD5").digest(Email.getBytes("UTF-8"))).toString(16)]]></TransientExpression>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DirectReports"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    AliasName="VIEW_ATTR"
+    SQLType="INTEGER"/>
+  <ViewAttribute
+    Name="Commission"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    AliasName="VIEW_ATTR"
+    SQLType="INTEGER">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA[Salary != null && CommissionPct != null ? (Salary*CommissionPct) : 0]]></TransientExpression>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="NoManagers"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="EmployeesViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ManagerId"
+        ViewAttribute="ManagerId"
+        Operator="ISBLANK"
+        Conjunction="AND"
+        GenerateIsNullClauseForBindVars="false"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="DepartmentsView"
     ViewLink="name.medin.tutorial.adf.intro.model.DeptMgrFkLink"

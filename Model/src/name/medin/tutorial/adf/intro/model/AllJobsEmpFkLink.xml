@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AllJobsEmpFkLink"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="name.medin.tutorial.adf.intro.model.AllJobsEmpFkLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="AllJobsView"
+    Cardinality="-1"
+    Source="true"
+    Owner="name.medin.tutorial.adf.intro.model.AllJobsView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="AllJobsView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="name.medin.tutorial.adf.intro.model.AllJobsView.JobId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="EmployeesView"
+    Cardinality="1"
+    Owner="name.medin.tutorial.adf.intro.model.EmployeesView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EmployeesView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="name.medin.tutorial.adf.intro.model.EmployeesView.JobId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

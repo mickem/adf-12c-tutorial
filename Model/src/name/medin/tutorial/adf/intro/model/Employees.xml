@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="EMPLOYEES"
   AliasName="Employees"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="name.medin.tutorial.adf.intro.model.EmployeesImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="EmployeeId"
     IsNotNull="true"
@@ -59,6 +64,7 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="25"/>
     </DesignTime>
+    <TransientExpression><![CDATA[(FirstName==null?"firstname":FirstName)+"."+(LastName==null?"lastname":LastName)+"@connecta.se"]]></TransientExpression>
   </Attribute>
   <Attribute
     Name="PhoneNumber"
@@ -79,7 +85,9 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="EMPLOYEES"/>
+    TableName="EMPLOYEES">
+    <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
+  </Attribute>
   <Attribute
     Name="JobId"
     IsNotNull="true"
