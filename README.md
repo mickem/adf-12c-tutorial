@@ -1,14 +1,12 @@
-adf-12c-tutorial
-================
-
 ADF 12c Tutorial
+================
 
 This is a simple ADF 12c tutorial with goes through an entire application.
 It is designed to be a bit less point-n-click and more "think for your self". Thus the format is minimalistic. There is a word document with screen shots and so on for "a" solution.
 The tutorial is open ended so your solution might differ from mine but the idea is to have fun and learn a bit about ADF along the process.
 The tutorial assumes basic ADF and google skills as there is not much in explinations.
 
-The enviornment can be found as a vagrant image here: TODO
+The enviornment can be found as a vagrant image here: https://github.com/mickem/adf-12c-enviornment
 
 The assignments are divided up in three basic areas:
 
