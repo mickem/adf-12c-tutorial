@@ -1,6 +1,6 @@
-# ADF Tutorial: Part 1
+# ADF Tutorial, Part 1: Creating The Model
 
-## 1. Create new Application
+## 1. Create the Application
 
 Create a new application in JDeveloper using the following values.
 
@@ -48,7 +48,7 @@ Git:
 git config --global credential.helper cache
 ```
 
-2.	Creating the Model
+## 2. Creating the Model
 
 * Import the EMPLOYEES and DEPARTMENTS tables from the HR database.
   The database connection is already defined in JDeveloper but not in this application.
