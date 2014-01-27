@@ -295,6 +295,27 @@
       <Item Value="name.medin.tutorial.adf.intro.model.Employees.ManagerId"/>
     </AttrArray>
   </Key>
+  <validation:ExpressionValidationBean
+    Name="ValidateEmail"
+    OperandType="EXPR"
+    Inverse="false">
+    <validation:OnCondition><![CDATA[FirstName != null && LastName != null]]></validation:OnCondition>
+    <validation:MsgIds>
+      <validation:Item
+        Value="error.email"/>
+    </validation:MsgIds>
+    <validation:ResExpressions>
+      <validation:Expression
+        Name="1"><![CDATA[source.hints.Email.label]]></validation:Expression>
+      <validation:Expression
+        Name="2"><![CDATA[sourceRow.FirstName]]></validation:Expression>
+      <validation:Expression
+        Name="3"><![CDATA[sourceRow.LastName]]></validation:Expression>
+      <validation:Expression
+        Name="4"><![CDATA['@connecta.se']]></validation:Expression>
+    </validation:ResExpressions>
+    <validation:TransientExpression><![CDATA[Email.equalsIgnoreCase(FirstName+"."+LastName+"@connecta.se")]]></validation:TransientExpression>
+  </validation:ExpressionValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>
