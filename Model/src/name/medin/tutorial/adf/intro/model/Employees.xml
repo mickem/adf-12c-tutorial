@@ -124,6 +124,23 @@
           Name="2"><![CDATA[999999]]></validation:Expression>
       </validation:ResExpressions>
     </validation:PreDefinedValidationBean>
+    <validation:CompareValidationBean
+      Name="MinimumSalary"
+      ResId="name.medin.tutorial.adf.intro.model.Employees.Salary_Rule_1"
+      OnAttribute="Salary"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="5000">
+      <validation:ResExpressions>
+        <validation:Expression
+          Name="1"><![CDATA[source.hints.Salary.label]]></validation:Expression>
+        <validation:Expression
+          Name="2"><![CDATA[newValue]]></validation:Expression>
+        <validation:Expression
+          Name="3"><![CDATA[5000]]></validation:Expression>
+      </validation:ResExpressions>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="CommissionPct"
