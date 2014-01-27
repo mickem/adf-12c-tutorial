@@ -22,7 +22,8 @@
                                            shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}" id="ot3"/>
                         </af:column>
                         <af:column sortProperty="#{bindings.EmployeesView.hints.FirstName.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.EmployeesView.hints.FirstName.label}" id="c2">
+                                   sortable="true" headerText="#{bindings.EmployeesView.hints.FirstName.label}" id="c2"
+                                   partialTriggers="::t1 ::t2">
                             <af:outputText value="#{row.FirstName}"
                                            shortDesc="#{bindings.EmployeesView.hints.FirstName.tooltip}" id="ot4"/>
                         </af:column>
@@ -40,7 +41,7 @@
                 </f:facet>
                 <f:facet name="header"/>
                 <f:facet name="end">
-                    <af:panelFormLayout id="pfl1">
+                    <af:panelFormLayout id="pfl1" partialTriggers="t1 t2 t3">
                         <af:inputText value="#{bindings.Gravatar.inputValue}" label="#{bindings.Gravatar.hints.label}"
                                       required="#{bindings.Gravatar.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.Gravatar.hints.displayWidth}"
