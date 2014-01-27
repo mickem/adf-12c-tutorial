@@ -53,5 +53,30 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="EmployeesViewIterator" id="Gravatar">
+      <AttrNames>
+        <Item Value="Gravatar"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeesViewIterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeesViewIterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeesViewIterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeesViewIterator" id="PhoneNumber">
+      <AttrNames>
+        <Item Value="PhoneNumber"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
