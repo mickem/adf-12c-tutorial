@@ -133,7 +133,16 @@
     PrecisionRule="true"
     EntityAttrName="HireDate"
     EntityUsage="Employees"
-    AliasName="HIRE_DATE"/>
+    AliasName="HIRE_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="name.medin.tutorial.adf.intro.model.EmployeesView.HireDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="name.medin.tutorial.adf.intro.model.EmployeesView.HireDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="JobId"
     IsNotNull="true"
@@ -271,4 +280,8 @@
     ViewLink="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
