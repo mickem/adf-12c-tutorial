@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.2.66.68" id="DataBindings"
-             SeparateXMLFiles="false" Package="name.medin.tutorial.adf.intro.view" ClientType="Generic"></Application>
+             SeparateXMLFiles="false" Package="name.medin.tutorial.adf.intro.view" ClientType="Generic">
+  <pageMap>
+    <page path="/employees.jsf" usageId="name_medin_tutorial_adf_intro_view_employeesPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="name_medin_tutorial_adf_intro_view_employeesPageDef"
+          path="name.medin.tutorial.adf.intro.view.pageDefs.employeesPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="name.medin.tutorial.adf.intro.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

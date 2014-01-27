@@ -4,6 +4,24 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <iterator Binds="DepartmentsView" RangeSize="25" DataControl="AppModuleDataControl" id="DepartmentsViewIterator"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="DepartmentsViewIterator" id="DepartmentsView">
+      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.DepartmentsView" Name="DepartmentsView0">
+        <AttrNames>
+          <Item Value="DepartmentName"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="EmployeesView"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="DepartmentsView1">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

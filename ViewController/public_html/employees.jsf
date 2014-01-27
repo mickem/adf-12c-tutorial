@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="employees.jsf" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx" id="pt1">
                 <f:facet name="center"/>
@@ -9,8 +10,17 @@
                 <f:facet name="end"/>
                 <f:facet name="start">
                     <af:panelAccordion id="pa1">
-                        <af:showDetailItem text="Departments" id="sdi1"/>
+                        <af:showDetailItem text="Departments" id="sdi1">
+                            <af:tree value="#{bindings.DepartmentsView.treeModel}" var="node"
+                                     selectionListener="#{bindings.DepartmentsView.treeModel.makeCurrent}"
+                                     rowSelection="single" id="t1">
+                                <f:facet name="nodeStamp">
+                                    <af:outputText value="#{node}" id="ot1"/>
+                                </f:facet>
+                            </af:tree>
+                        </af:showDetailItem>
                         <af:showDetailItem text="Jobs" id="sdi2"/>
+                        <af:showDetailItem text="Search" id="sdi3"/>
                     </af:panelAccordion>
                 </f:facet>
                 <f:facet name="branding"/>
