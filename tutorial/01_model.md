@@ -146,8 +146,9 @@ You will need to translate that into a proper requirement first.
 The next step is to turn the database interface into a working usable model. Please use the Tester to validate all steps and make sure everything works as expected. The ?tasks? are described along the lines of user requirements and/or defects and thus only include the end users view. You will need to translate that into a proper requirement first.
 
 - Display the hire date as a date only (not showing the time).
-- Makes sure that the email address is a connecta.se address (i.e. michael.medin@connecta.se).
+- Make sure the error message for setting the salary to value bigger than maximum is: "Salary cannot be higher than X"
 - Make sure that sallery has to be more then 5000.
+- Makes sure that the email address is a connecta.se address (i.e. michael.medin@connecta.se).
 - Make sure that for programmers (IT_PROG) salary has to be more than 50000.
 - Make sure the error message for salary containes the corresponding minimum value.
 - Make sure that HireDate can only be changed on new entries
