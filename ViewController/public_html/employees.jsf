@@ -27,8 +27,8 @@
                             <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
                                        id="c1">
-                                <af:outputText value="#{row.Gravatar}"
-                                               shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}" id="ot3"/>
+                                <af:image source="#{row.Gravatar}?s=16" shortDesc="#{bindings.Gravatar.hints.tooltip}"
+                                          id="i1"/>
                             </af:column>
                             <af:column sortProperty="#{bindings.EmployeesView.hints.FirstName.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.EmployeesView.hints.FirstName.label}"
@@ -52,44 +52,48 @@
                 </f:facet>
                 <f:facet name="header"/>
                 <f:facet name="end">
-                    <af:panelFormLayout id="pfl1" partialTriggers="t1 t2 pc1:t3">
-                        <af:inputText value="#{bindings.Gravatar.inputValue}" label="#{bindings.Gravatar.hints.label}"
-                                      required="#{bindings.Gravatar.hints.mandatory}" readOnly="true"
-                                      columns="#{bindings.Gravatar.hints.displayWidth}"
-                                      maximumLength="#{bindings.Gravatar.hints.precision}"
-                                      shortDesc="#{bindings.Gravatar.hints.tooltip}" id="it1">
-                            <f:validator binding="#{bindings.Gravatar.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
-                                      required="#{bindings.FirstName.hints.mandatory}" readOnly="true"
-                                      columns="#{bindings.FirstName.hints.displayWidth}"
-                                      maximumLength="#{bindings.FirstName.hints.precision}"
-                                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it2">
-                            <f:validator binding="#{bindings.FirstName.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
-                                      required="#{bindings.LastName.hints.mandatory}" readOnly="true"
-                                      columns="#{bindings.LastName.hints.displayWidth}"
-                                      maximumLength="#{bindings.LastName.hints.precision}"
-                                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it3">
-                            <f:validator binding="#{bindings.LastName.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
-                                      required="#{bindings.Email.hints.mandatory}" readOnly="true"
-                                      columns="#{bindings.Email.hints.displayWidth}"
-                                      maximumLength="#{bindings.Email.hints.precision}"
-                                      shortDesc="#{bindings.Email.hints.tooltip}" id="it4">
-                            <f:validator binding="#{bindings.Email.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.PhoneNumber.inputValue}"
-                                      label="#{bindings.PhoneNumber.hints.label}"
-                                      required="#{bindings.PhoneNumber.hints.mandatory}" readOnly="true"
-                                      columns="#{bindings.PhoneNumber.hints.displayWidth}"
-                                      maximumLength="#{bindings.PhoneNumber.hints.precision}"
-                                      shortDesc="#{bindings.PhoneNumber.hints.tooltip}" id="it5">
-                            <f:validator binding="#{bindings.PhoneNumber.validator}"/>
-                        </af:inputText>
-                    </af:panelFormLayout>
+                    <af:panelBorderLayout id="pbl1">
+                        <f:facet name="start"/>
+                        <f:facet name="bottom"/>
+                        <f:facet name="end"/>
+                        <f:facet name="top">
+                            <af:image source="#{bindings.Gravatar.inputValue}?s=200"
+                                      shortDesc="#{bindings.Gravatar.hints.tooltip}" id="it1"/>
+                        </f:facet>
+                        <af:panelFormLayout id="pfl1" partialTriggers="t1 t2 pc1:t3">
+                            <af:inputText value="#{bindings.FirstName.inputValue}"
+                                          label="#{bindings.FirstName.hints.label}"
+                                          required="#{bindings.FirstName.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.FirstName.hints.displayWidth}"
+                                          maximumLength="#{bindings.FirstName.hints.precision}"
+                                          shortDesc="#{bindings.FirstName.hints.tooltip}" id="it2">
+                                <f:validator binding="#{bindings.FirstName.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.LastName.inputValue}"
+                                          label="#{bindings.LastName.hints.label}"
+                                          required="#{bindings.LastName.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.LastName.hints.displayWidth}"
+                                          maximumLength="#{bindings.LastName.hints.precision}"
+                                          shortDesc="#{bindings.LastName.hints.tooltip}" id="it3">
+                                <f:validator binding="#{bindings.LastName.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                                          required="#{bindings.Email.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.Email.hints.displayWidth}"
+                                          maximumLength="#{bindings.Email.hints.precision}"
+                                          shortDesc="#{bindings.Email.hints.tooltip}" id="it4">
+                                <f:validator binding="#{bindings.Email.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.PhoneNumber.inputValue}"
+                                          label="#{bindings.PhoneNumber.hints.label}"
+                                          required="#{bindings.PhoneNumber.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.PhoneNumber.hints.displayWidth}"
+                                          maximumLength="#{bindings.PhoneNumber.hints.precision}"
+                                          shortDesc="#{bindings.PhoneNumber.hints.tooltip}" id="it5">
+                                <f:validator binding="#{bindings.PhoneNumber.validator}"/>
+                            </af:inputText>
+                        </af:panelFormLayout>
+                    </af:panelBorderLayout>
                 </f:facet>
                 <f:facet name="start">
                     <af:panelAccordion id="pa1">
@@ -117,6 +121,7 @@
                 <f:facet name="branding"/>
                 <f:facet name="copyright"/>
                 <f:facet name="status"/>
+                <f:attribute name="endColumnSize" value="200"/>
             </af:pageTemplate>
         </af:form>
     </af:document>
