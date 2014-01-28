@@ -9,9 +9,9 @@
       <property
          name="page">/edit.jsf</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>edit.jsf&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>edit.jsf&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -53,7 +53,7 @@
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">R50,388.83093,172.26562,458.66907,208.53125,L50</property>
+         name="sdm:polyPoints">R50,388.0,172.28125,459.5,208.53125,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -63,7 +63,7 @@
       <property
          name="fromOutcome">cancel</property>
       <property
-         name="sdm:polyPoints">B50,347.0,227.06529,451.5,275.76282,T50</property>
+         name="sdm:polyPoints">B50,347.0,226.28125,451.5,276.59375,T50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn7">
@@ -105,46 +105,25 @@
       <property
          name="activityId">createOrEdit</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>createOrEdit&lt;/b>&lt;/p>&lt;p>Activity Type:  Router&lt;/p></property>
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createOrEdit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Router&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">145.03125</property>
+         name="y">162.07812</property>
       <property
-         name="x">96.0</property>
+         name="x">119.0</property>
    </Router>
-   <MethodCall
-      id="MethodCall11">
-      <property
-         name="activityId">Create</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>Create&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="y">323.51562</property>
-      <property
-         name="x">221.5</property>
-   </MethodCall>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase12"
       from="Router10"
-      to="MethodCall11">
+      to="MethodCall15">
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">B50,96.0,199.04688,218.0,269.53125,T44</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="MethodCall11"
-      to="View2">
-      <property
-         name="fromOutcome">Create</property>
-      <property
-         name="sdm:polyPoints">T56,225.0,269.53125,306.0,175.78125,L54</property>
+         name="sdm:polyPoints">B50,119.0,216.09375,207.77734,280.53125,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -154,6 +133,29 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R50,137.0,145.04688,306.0,168.78125,L46</property>
+         name="sdm:polyPoints">R50,160.0,162.09375,306.0,168.78125,L46</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall15">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">334.54688</property>
+      <property
+         name="x">211.27734</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="MethodCall15"
+      to="View2">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">T56,214.77734,280.5625,306.0,175.78125,L54</property>
    </ControlFlowCase>
 </SDM>

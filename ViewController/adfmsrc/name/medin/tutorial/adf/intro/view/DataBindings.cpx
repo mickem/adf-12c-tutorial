@@ -8,8 +8,8 @@
     <page path="/WEB-INF/edit-employees.xml#edit-employees@Rollback"
           usageId="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_RollbackPageDef"/>
     <page path="/edit.jsf" usageId="name_medin_tutorial_adf_intro_view_editPageDef"/>
-    <page path="/WEB-INF/edit-employees.xml#edit-employees@Create"
-          usageId="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_CreatePageDef"/>
+    <page path="/WEB-INF/edit-employees.xml#edit-employees@CreateInsert"
+          usageId="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="name_medin_tutorial_adf_intro_view_employeesPageDef"
@@ -20,8 +20,8 @@
           path="name.medin.tutorial.adf.intro.view.pageDefs.edit_employees_edit_employees_RollbackPageDef"/>
     <page id="name_medin_tutorial_adf_intro_view_editPageDef"
           path="name.medin.tutorial.adf.intro.view.pageDefs.editPageDef"/>
-    <page id="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_CreatePageDef"
-          path="name.medin.tutorial.adf.intro.view.pageDefs.edit_employees_edit_employees_CreatePageDef"/>
+    <page id="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_CreateInsertPageDef"
+          path="name.medin.tutorial.adf.intro.view.pageDefs.edit_employees_edit_employees_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="name.medin.tutorial.adf.intro.model"

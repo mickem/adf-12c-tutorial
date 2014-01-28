@@ -10,7 +10,12 @@
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
-                                <af:button text="Edit" id="b1" action="editEmployee"/>
+                                <af:button text="Edit" id="b1" action="editEmployee">
+                                    <f:setPropertyActionListener target="#{employeeHelper.action}" value="edit"/>
+                                </af:button>
+                                <af:button text="New" id="b2" action="editEmployee">
+                                    <f:setPropertyActionListener target="#{employeeHelper.action}" value="create"/>
+                                </af:button>
                             </af:toolbar>
                         </f:facet>
                         <f:facet name="statusbar"/>
