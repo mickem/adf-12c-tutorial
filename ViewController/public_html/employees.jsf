@@ -6,42 +6,53 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx" id="pt1">
                 <f:facet name="center">
-                    <af:table value="#{bindings.EmployeesView.collectionModel}" var="row"
-                              rows="#{bindings.EmployeesView.rangeSize}"
-                              emptyText="#{bindings.EmployeesView.viewable ? 'No data to display.' : 'Access Denied.'}"
-                              rowBandingInterval="0"
-                              selectedRowKeys="#{bindings.EmployeesView.collectionModel.selectedRow}"
-                              selectionListener="#{bindings.EmployeesView.collectionModel.makeCurrent}"
-                              rowSelection="single" fetchSize="#{bindings.EmployeesView.rangeSize}"
-                              filterModel="#{bindings.EmployeesViewQuery.queryDescriptor}"
-                              queryListener="#{bindings.EmployeesViewQuery.processQuery}" filterVisible="true"
-                              varStatus="vs" id="t3">
-                        <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}" id="c1">
-                            <af:outputText value="#{row.Gravatar}"
-                                           shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}" id="ot3"/>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.EmployeesView.hints.FirstName.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.EmployeesView.hints.FirstName.label}" id="c2"
-                                   partialTriggers="::t1 ::t2">
-                            <af:outputText value="#{row.FirstName}"
-                                           shortDesc="#{bindings.EmployeesView.hints.FirstName.tooltip}" id="ot4"/>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.EmployeesView.hints.LastName.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.EmployeesView.hints.LastName.label}" id="c3">
-                            <af:outputText value="#{row.LastName}"
-                                           shortDesc="#{bindings.EmployeesView.hints.LastName.tooltip}" id="ot5"/>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.EmployeesView.hints.Email.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.EmployeesView.hints.Email.label}" id="c4">
-                            <af:outputText value="#{row.Email}"
-                                           shortDesc="#{bindings.EmployeesView.hints.Email.tooltip}" id="ot6"/>
-                        </af:column>
-                    </af:table>
+                    <af:panelCollection id="pc1">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar">
+                            <af:toolbar id="t4">
+                                <af:button text="Edit" id="b1" action="editEmployee"/>
+                            </af:toolbar>
+                        </f:facet>
+                        <f:facet name="statusbar"/>
+                        <af:table value="#{bindings.EmployeesView.collectionModel}" var="row"
+                                  rows="#{bindings.EmployeesView.rangeSize}"
+                                  emptyText="#{bindings.EmployeesView.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.EmployeesView.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.EmployeesView.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.EmployeesView.rangeSize}"
+                                  filterModel="#{bindings.EmployeesViewQuery.queryDescriptor}"
+                                  queryListener="#{bindings.EmployeesViewQuery.processQuery}" filterVisible="true"
+                                  varStatus="vs" id="t3" partialTriggers=":::t1 :::t2">
+                            <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
+                                       id="c1">
+                                <af:outputText value="#{row.Gravatar}"
+                                               shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}" id="ot3"/>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.EmployeesView.hints.FirstName.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.EmployeesView.hints.FirstName.label}"
+                                       id="c2">
+                                <af:outputText value="#{row.FirstName}"
+                                               shortDesc="#{bindings.EmployeesView.hints.FirstName.tooltip}" id="ot4"/>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.EmployeesView.hints.LastName.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.EmployeesView.hints.LastName.label}"
+                                       id="c3">
+                                <af:outputText value="#{row.LastName}"
+                                               shortDesc="#{bindings.EmployeesView.hints.LastName.tooltip}" id="ot5"/>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.EmployeesView.hints.Email.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.EmployeesView.hints.Email.label}" id="c4">
+                                <af:outputText value="#{row.Email}"
+                                               shortDesc="#{bindings.EmployeesView.hints.Email.tooltip}" id="ot6"/>
+                            </af:column>
+                        </af:table>
+                    </af:panelCollection>
                 </f:facet>
                 <f:facet name="header"/>
                 <f:facet name="end">
-                    <af:panelFormLayout id="pfl1" partialTriggers="t1 t2 t3">
+                    <af:panelFormLayout id="pfl1" partialTriggers="t1 t2 pc1:t3">
                         <af:inputText value="#{bindings.Gravatar.inputValue}" label="#{bindings.Gravatar.hints.label}"
                                       required="#{bindings.Gravatar.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.Gravatar.hints.displayWidth}"

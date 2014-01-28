@@ -41,9 +41,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">318.54688</property>
+         name="y">330.57812</property>
       <property
-         name="x">498.5</property>
+         name="x">451.5</property>
    </MethodCall>
    <ControlFlowCase
       islink="true"
@@ -63,7 +63,7 @@
       <property
          name="fromOutcome">cancel</property>
       <property
-         name="sdm:polyPoints">R54,265.0,234.59375,457.5,318.5625,L50</property>
+         name="sdm:polyPoints">R54,265.0,234.59375,410.5,330.59375,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn7">
@@ -98,6 +98,6 @@
       <property
          name="fromOutcome">Rollback</property>
       <property
-         name="sdm:polyPoints">R50,539.5,318.5625,623.0,257.76562,L54</property>
+         name="sdm:polyPoints">R50,492.5,330.59375,623.0,257.76562,L54</property>
    </ControlFlowCase>
 </SDM>

@@ -30,7 +30,7 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">289.59375</property>
+         name="y">289.60938</property>
       <property
          name="x">385.42676</property>
    </TaskFlowCall>
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">*</property>
       <property
-         name="sdm:polyPoints">R46,210.74219,296.04688,344.1663,286.09375,L46</property>
+         name="sdm:polyPoints">R46,210.74219,296.04688,344.16708,286.125,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -52,6 +52,6 @@
       <property
          name="fromOutcome">return</property>
       <property
-         name="sdm:polyPoints">L54,344.42676,293.09375,211.00241,303.04688,R54</property>
+         name="sdm:polyPoints">L54,344.42676,293.125,211.0016,303.04688,R54</property>
    </ControlFlowCase>
 </SDM>

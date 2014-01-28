@@ -81,7 +81,7 @@
                         </af:selectOneChoice>
                         <f:facet name="footer">
                             <af:panelGroupLayout id="pgl1" halign="center">
-                                <af:button text="Cancel" id="b2"/>
+                                <af:button text="Cancel" id="b2" action="cancel"/>
                                 <af:button text="Save" id="b1" action="save"/>
                             </af:panelGroupLayout>
                         </f:facet>
