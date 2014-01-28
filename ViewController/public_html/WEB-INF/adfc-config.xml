@@ -8,6 +8,10 @@
       <document>/WEB-INF/edit-employees.xml</document>
       <id>edit-employees</id>
     </task-flow-reference>
+    <input-parameter id="__7">
+      <name>action</name>
+      <value>#{employeeHelper.action}</value>
+    </input-parameter>
   </task-flow-call>
   <control-flow-rule id="__1">
     <from-activity-id>employees</from-activity-id>
@@ -23,4 +27,9 @@
       <to-activity-id>employees</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
+  <managed-bean id="__6">
+    <managed-bean-name>employeeHelper</managed-bean-name>
+    <managed-bean-class>name.medin.tutorial.adf.intro.view.EmployeeHelper</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

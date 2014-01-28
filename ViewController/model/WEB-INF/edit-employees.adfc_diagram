@@ -88,7 +88,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,542.33093,208.53125,622.16907,249.9347,L45</property>
+         name="sdm:polyPoints">R50,541.5,208.53125,623.0,250.76562,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -98,7 +98,7 @@
       <property
          name="fromOutcome">Rollback</property>
       <property
-         name="sdm:polyPoints">R50,493.33093,330.59375,622.16907,258.59656,L55</property>
+         name="sdm:polyPoints">R50,492.5,330.59375,623.0,257.76562,L54</property>
    </ControlFlowCase>
    <Router
       id="Router10">
@@ -134,7 +134,7 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">B50,96.0,199.8778,217.16907,268.70032,T43</property>
+         name="sdm:polyPoints">B50,96.0,199.04688,218.0,269.53125,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -144,7 +144,7 @@
       <property
          name="fromOutcome">Create</property>
       <property
-         name="sdm:polyPoints">T57,225.83093,268.70032,305.16907,176.61221,L55</property>
+         name="sdm:polyPoints">T56,225.0,269.53125,306.0,175.78125,L54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -154,6 +154,6 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R50,137.83093,145.04688,305.16907,167.95033,L45</property>
+         name="sdm:polyPoints">R50,137.0,145.04688,306.0,168.78125,L46</property>
    </ControlFlowCase>
 </SDM>
