@@ -5,6 +5,12 @@
     <transaction>
       <new-transaction/>
     </transaction>
+    <input-parameter-definition id="__2">
+      <name>action</name>
+      <value>#{pageFlowScope.action}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
     <view id="edit.jsf">
       <page>/edit.jsf</page>
     </view>
@@ -26,6 +32,22 @@
         <rollback/>
       </outcome>
     </task-flow-return>
+    <router id="createOrEdit">
+      <case id="__13">
+        <expression>#{pageFlowScope.action == 'edit'}</expression>
+        <outcome>edit</outcome>
+      </case>
+      <case id="__15">
+        <expression>#{pageFlowScope.action == 'create'}</expression>
+        <outcome>create</outcome>
+      </case>
+    </router>
+    <method-call id="Create">
+      <method>#{bindings.Create.execute}</method>
+      <outcome>
+        <fixed-outcome>Create</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>edit.jsf</from-activity-id>
       <control-flow-case id="save">
@@ -49,6 +71,24 @@
       <control-flow-case id="__7">
         <from-outcome>Rollback</from-outcome>
         <to-activity-id>return</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>createOrEdit</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>create</from-outcome>
+        <to-activity-id>Create</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>edit.jsf</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>Create</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>Create</from-outcome>
+        <to-activity-id>edit.jsf</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>
