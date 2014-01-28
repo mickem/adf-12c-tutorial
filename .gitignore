@@ -4,3 +4,5 @@
 cwallet.sso
 *.swp
 *.lck
+temp-pom.xml
+ViewController/public_html/WEB-INF/temp/
