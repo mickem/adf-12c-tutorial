@@ -7,6 +7,8 @@
       <property
          name="activityId">edit.jsf</property>
       <property
+         name="page">/edit.jsf</property>
+      <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>edit.jsf&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
@@ -51,7 +53,7 @@
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">R45,265.83093,226.76282,458.66907,208.53125,L50</property>
+         name="sdm:polyPoints">R46,265.0,227.59375,459.5,208.53125,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -61,6 +63,6 @@
       <property
          name="fromOutcome">cancel</property>
       <property
-         name="sdm:polyPoints">R55,265.83093,235.42468,456.6691,318.5625,L50</property>
+         name="sdm:polyPoints">R54,265.0,234.59375,457.5,318.5625,L50</property>
    </ControlFlowCase>
 </SDM>

@@ -7,6 +7,7 @@
           usageId="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_CommitPageDef"/>
     <page path="/WEB-INF/edit-employees.xml#edit-employees@Rollback"
           usageId="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_RollbackPageDef"/>
+    <page path="/edit.jsf" usageId="name_medin_tutorial_adf_intro_view_editPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="name_medin_tutorial_adf_intro_view_employeesPageDef"
@@ -15,6 +16,8 @@
           path="name.medin.tutorial.adf.intro.view.pageDefs.edit_employees_edit_employees_CommitPageDef"/>
     <page id="name_medin_tutorial_adf_intro_view_edit_employees_edit_employees_RollbackPageDef"
           path="name.medin.tutorial.adf.intro.view.pageDefs.edit_employees_edit_employees_RollbackPageDef"/>
+    <page id="name_medin_tutorial_adf_intro_view_editPageDef"
+          path="name.medin.tutorial.adf.intro.view.pageDefs.editPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="name.medin.tutorial.adf.intro.model"
