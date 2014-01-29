@@ -22,3 +22,6 @@ Many of the assignments require you to checkout various tags in git and fixing i
 
 FIY: This is a work in progress and will be finnished in the next few weeks.
 The first section is in progress and will be finnished soon.
+
+Here follows some instruction to fork this repo and connect it with ADF
+Do you have a GitHub account? If not start here: https://github.com/signup 
