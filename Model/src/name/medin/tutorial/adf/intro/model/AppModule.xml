@@ -8,7 +8,7 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
-    Name="DepartmentsView1"
+    Name="DepartmentsView"
     ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"/>
   <ViewUsage
     Name="EmployeesView1"
@@ -37,7 +37,7 @@
   <ViewLinkUsage
     Name="EmpDeptFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpDeptFkLink"
-    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView1"
+    SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView"
     DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView3"
     Reversed="false"/>
 </AppModule>
