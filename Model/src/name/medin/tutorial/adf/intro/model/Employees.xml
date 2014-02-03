@@ -86,7 +86,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsUpdateable="while_insert">
     <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
   </Attribute>
   <Attribute
