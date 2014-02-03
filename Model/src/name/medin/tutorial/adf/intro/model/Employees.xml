@@ -80,7 +80,9 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="EMPLOYEES"/>
+    TableName="EMPLOYEES">
+    <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
+  </Attribute>
   <Attribute
     Name="JobId"
     IsNotNull="true"
