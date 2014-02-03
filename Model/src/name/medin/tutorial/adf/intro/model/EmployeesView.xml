@@ -214,6 +214,41 @@
     AliasName="VIEW_ATTR"
     SQLType="INTEGER"
     Expression="SELECT count(*) FROM EMPLOYEES dr WHERE dr.MANAGER_ID = Employees.EMPLOYEE_ID"/>
+  <ViewCriteria
+    Name="NoManagers"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="EmployeesViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ManagerId"
+        ViewAttribute="ManagerId"
+        Operator="ISBLANK"
+        Conjunction="AND"
+        GenerateIsNullClauseForBindVars="false"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="DepartmentsView"
     ViewLink="name.medin.tutorial.adf.intro.model.DeptMgrFkLink"
