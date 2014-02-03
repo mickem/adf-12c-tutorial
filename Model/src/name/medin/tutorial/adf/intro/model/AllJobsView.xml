@@ -49,6 +49,11 @@
       <Attr Name="_DisplaySize" Value="35"/>
     </DesignTime>
   </ViewAttribute>
+  <ViewLinkAccessor
+    Name="EmployeesView"
+    ViewLink="name.medin.tutorial.adf.intro.model.AllJobsEmpFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>

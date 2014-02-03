@@ -60,6 +60,7 @@ public class EmployeesImpl extends EntityImpl {
         }
     }
 
+
     public static final int EMPLOYEEID = AttributesEnum.EmployeeId.index();
     public static final int FIRSTNAME = AttributesEnum.FirstName.index();
     public static final int LASTNAME = AttributesEnum.LastName.index();
@@ -88,6 +89,7 @@ public class EmployeesImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("name.medin.tutorial.adf.intro.model.Employees");
     }
+
 
     /**
      * Gets the attribute value for EmployeeId, using the alias name EmployeeId.
