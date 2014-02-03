@@ -16,7 +16,8 @@
        Employees.SALARY, 
        Employees.COMMISSION_PCT, 
        Employees.MANAGER_ID, 
-       Employees.DEPARTMENT_ID"
+       Employees.DEPARTMENT_ID, 
+       (SELECT count(*) FROM EMPLOYEES dr WHERE dr.MANAGER_ID = Employees.EMPLOYEE_ID) AS VIEW_ATTR"
   FromList="EMPLOYEES Employees"
   BindingStyle="OracleName"
   CustomQuery="false"
@@ -203,6 +204,16 @@
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
     <TransientExpression><![CDATA["http://gravtar.com/avatar/" + new BigInteger(1, java.security.MessageDigest.getInstance("MD5").digest(Email.getBytes("UTF-8"))).toString(16)]]></TransientExpression>
   </ViewAttribute>
+  <ViewAttribute
+    Name="DirectReports"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    AliasName="VIEW_ATTR"
+    SQLType="INTEGER"
+    Expression="SELECT count(*) FROM EMPLOYEES dr WHERE dr.MANAGER_ID = Employees.EMPLOYEE_ID"/>
   <ViewLinkAccessor
     Name="DepartmentsView"
     ViewLink="name.medin.tutorial.adf.intro.model.DeptMgrFkLink"
