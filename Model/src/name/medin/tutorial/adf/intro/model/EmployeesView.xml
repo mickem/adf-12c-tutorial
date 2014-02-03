@@ -96,6 +96,20 @@
     EntityAttrName="DepartmentId"
     EntityUsage="Employees"
     AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="Gravatar"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA["http://gravtar.com/avatar/" + new BigInteger(1, java.security.MessageDigest.getInstance("MD5").digest(Email.getBytes("UTF-8"))).toString(16)]]></TransientExpression>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="DepartmentsView"
     ViewLink="name.medin.tutorial.adf.intro.model.DeptMgrFkLink"
