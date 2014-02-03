@@ -151,6 +151,7 @@ You will need to translate that into a proper requirement first.
 * 5.8.	When do you use the view accessor?
 * 5.8.	What's the difference between a view link and a view accessor?
 * 5.9. How could we have avoided adding the View Object for Jobs by hand?
+* 5.10. Whats the problem with using Integer?
 
 ## 6.0 Validating the model
 
