@@ -35,16 +35,11 @@ Model Package:    | name.medin.tutorial.adf.intro.model | name.medin.tutorial.ad
 
 ### Setup git
 
-```
-# create project
-# exit JDeveloper
-cd <project folder>/..
-mv <project folder> <project folder>.old
-git clone https://github.com/mickem/adf-12c-tutorial.git <project folder>
-cd <project folder>
-git branch <myname>
-#restart jdeveloper
-```
+Post-sertup of git is somewhat involved.
+* In essence you need to clone the repo (dont create a project/application)
+* Create/checkout your local branch
+* Manually create the two projects (Model/View)
+* Manually create the maven application POM
 
 ### Setup git password caching
 
