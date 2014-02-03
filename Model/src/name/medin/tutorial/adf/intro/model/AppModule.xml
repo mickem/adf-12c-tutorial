@@ -19,6 +19,9 @@
   <ViewUsage
     Name="EmployeesInDepartment"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
+  <ViewUsage
+    Name="AllJobsView1"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.AllJobsView"/>
   <ViewLinkUsage
     Name="EmpManagerFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"
