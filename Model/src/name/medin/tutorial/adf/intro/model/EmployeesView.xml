@@ -21,6 +21,30 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="Managers"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ManagerId"
+    ListVOName="Managers"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ManagerId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Employees"
     Entity="name.medin.tutorial.adf.intro.model.Employees"/>
@@ -89,7 +113,15 @@
     PrecisionRule="true"
     EntityAttrName="ManagerId"
     EntityUsage="Employees"
-    AliasName="MANAGER_ID"/>
+    AliasName="MANAGER_ID"
+    LOVName="LOV_ManagerId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DepartmentId"
     PrecisionRule="true"
