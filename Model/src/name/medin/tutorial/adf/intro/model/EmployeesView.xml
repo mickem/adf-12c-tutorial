@@ -25,6 +25,10 @@
     Name="Managers"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Departments"
+    ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_ManagerId"
     ListVOName="Managers"
@@ -42,6 +46,25 @@
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="FirstName"/>
       <Item Value="LastName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DepartmentId"
+    ListVOName="Departments"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="DepartmentName"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -127,7 +150,15 @@
     PrecisionRule="true"
     EntityAttrName="DepartmentId"
     EntityUsage="Employees"
-    AliasName="DEPARTMENT_ID"/>
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Gravatar"
     IsUpdateable="false"
