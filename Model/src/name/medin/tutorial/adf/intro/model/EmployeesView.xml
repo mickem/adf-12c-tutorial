@@ -134,7 +134,16 @@
     PrecisionRule="true"
     EntityAttrName="HireDate"
     EntityUsage="Employees"
-    AliasName="HIRE_DATE"/>
+    AliasName="HIRE_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="name.medin.tutorial.adf.intro.model.EmployeesView.HireDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="name.medin.tutorial.adf.intro.model.EmployeesView.HireDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="JobId"
     IsNotNull="true"
@@ -214,6 +223,19 @@
     AliasName="VIEW_ATTR"
     SQLType="INTEGER"
     Expression="SELECT count(*) FROM EMPLOYEES dr WHERE dr.MANAGER_ID = Employees.EMPLOYEE_ID"/>
+  <ViewAttribute
+    Name="Commission"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    AliasName="VIEW_ATTR"
+    SQLType="INTEGER">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA[Salary != null && CommissionPct != null ? (Salary*CommissionPct):0]]></TransientExpression>
+  </ViewAttribute>
   <ViewCriteria
     Name="NoManagers"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"
@@ -296,4 +318,8 @@
     ViewLink="name.medin.tutorial.adf.intro.model.EmpManagerFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="name.medin.tutorial.adf.intro.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
