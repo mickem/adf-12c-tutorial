@@ -145,10 +145,12 @@ You will need to translate that into a proper requirement first.
 * 5.1.	Where (Entity object or View) do we put custom attributes and why?
 * 5.2.	Where (Entity object or View) do we put default values and why?
 * 5.3.	Where (Entity object or View) do we put LOVs and why?
-* 5.4.	What's bad about where we placed the code for the id-sequence value? 
-* 5.5.	When do you use the view link?
-* 5.6.	When do you use the view accessor?
-* 5.7.	What's the difference between a view link and a view accessor?
+* 5.4.	What's bad about where we placed the code for the id-sequence value?
+* 5.5. Do we have any other options for the logic for generating the sequence?
+* 5.6.	When do you use the view link?
+* 5.8.	When do you use the view accessor?
+* 5.8.	What's the difference between a view link and a view accessor?
+* 5.9. How could we have avoided adding the View Object for Jobs by hand?
 
 ## 6.0 Validating the model
 
