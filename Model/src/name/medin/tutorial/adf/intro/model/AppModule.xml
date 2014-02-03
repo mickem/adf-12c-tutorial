@@ -20,7 +20,7 @@
     Name="EmployeesView2"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
   <ViewUsage
-    Name="EmployeesView3"
+    Name="EmployeesInDepartment"
     ViewObjectName="name.medin.tutorial.adf.intro.model.EmployeesView"/>
   <ViewLinkUsage
     Name="DeptMgrFkLink1"
@@ -38,6 +38,6 @@
     Name="EmpDeptFkLink1"
     ViewLinkObjectName="name.medin.tutorial.adf.intro.model.EmpDeptFkLink"
     SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsView"
-    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesView3"
+    DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.EmployeesInDepartment"
     Reversed="false"/>
 </AppModule>
