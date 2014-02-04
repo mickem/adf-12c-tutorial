@@ -19,7 +19,15 @@
                                 </f:facet>
                             </af:tree>
                         </af:showDetailItem>
-                        <af:showDetailItem text="Jobs" id="sdi2"/>
+                        <af:showDetailItem text="Jobs" id="sdi2">
+                            <af:tree value="#{bindings.AllJobsView.treeModel}" var="node"
+                                     selectionListener="#{bindings.AllJobsView.treeModel.makeCurrent}"
+                                     rowSelection="single" id="t2">
+                                <f:facet name="nodeStamp">
+                                    <af:outputText value="#{node}" id="ot2"/>
+                                </f:facet>
+                            </af:tree>
+                        </af:showDetailItem>
                         <af:showDetailItem text="Search" id="sdi3"/>
                     </af:panelAccordion>
                 </f:facet>

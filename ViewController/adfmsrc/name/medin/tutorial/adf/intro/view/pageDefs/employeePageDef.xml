@@ -5,6 +5,7 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="DepartmentsView" RangeSize="25" DataControl="AppModuleDataControl" id="DepartmentsViewIterator"/>
+    <iterator Binds="AllJobsView" RangeSize="25" DataControl="AppModuleDataControl" id="AllJobsViewIterator"/>
   </executables>
   <bindings>
     <tree IterBinding="DepartmentsViewIterator" id="DepartmentsView">
@@ -17,6 +18,22 @@
         </Accessors>
       </nodeDefinition>
       <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="DepartmentsView1">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AllJobsViewIterator" id="AllJobsView">
+      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.AllJobsView" Name="AllJobsView0">
+        <AttrNames>
+          <Item Value="JobTitle"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="EmployeesView"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="AllJobsView1">
         <AttrNames>
           <Item Value="FirstName"/>
           <Item Value="LastName"/>
