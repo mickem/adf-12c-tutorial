@@ -39,7 +39,40 @@
                     </af:table>
                 </f:facet>
                 <f:facet name="header"/>
-                <f:facet name="end"/>
+                <f:facet name="end">
+                    <af:panelFormLayout id="pfl1">
+                        <af:outputText value="#{bindings.Gravatar.inputValue}"
+                                       shortDesc="#{bindings.Gravatar.hints.tooltip}" id="ot3"/>
+                        <af:panelLabelAndMessage label="#{bindings.FirstName.hints.label}" id="plam1">
+                            <af:outputText value="#{bindings.FirstName.inputValue}"
+                                           shortDesc="#{bindings.FirstName.hints.tooltip}" id="ot7"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.LastName.hints.label}" id="plam2">
+                            <af:outputText value="#{bindings.LastName.inputValue}"
+                                           shortDesc="#{bindings.LastName.hints.tooltip}" id="ot8"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.Email.hints.label}" id="plam3">
+                            <af:outputText value="#{bindings.Email.inputValue}"
+                                           shortDesc="#{bindings.Email.hints.tooltip}" id="ot9"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.PhoneNumber.hints.label}" id="plam4">
+                            <af:outputText value="#{bindings.PhoneNumber.inputValue}"
+                                           shortDesc="#{bindings.PhoneNumber.hints.tooltip}" id="ot10"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.ManagerId.hints.label}" id="plam5">
+                            <af:outputText value="#{bindings.ManagerId.inputValue}"
+                                           shortDesc="#{bindings.ManagerId.hints.tooltip}" id="ot12">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.DepartmentId.hints.label}" id="plam6">
+                            <af:outputText value="#{bindings.DepartmentId.inputValue}"
+                                           shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="ot13">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                    </af:panelFormLayout>
+                </f:facet>
                 <f:facet name="start">
                     <af:panelAccordion id="pa1">
                         <af:showDetailItem text="Departments" id="sdi1">
