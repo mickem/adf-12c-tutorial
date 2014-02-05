@@ -5,12 +5,16 @@
     <page path="/employee.jsf" usageId="name_medin_tutorial_adf_intro_view_employeePageDef"/>
     <page path="/WEB-INF/employee-definition.xml#employee-definition@Commit"
           usageId="name_medin_tutorial_adf_intro_view_employee_definition_employee_definition_CommitPageDef"/>
+    <page path="/WEB-INF/employee-definition.xml#employee-definition@Rollback"
+          usageId="name_medin_tutorial_adf_intro_view_employee_definition_employee_definition_RollbackPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="name_medin_tutorial_adf_intro_view_employeePageDef"
           path="name.medin.tutorial.adf.intro.view.pageDefs.employeePageDef"/>
     <page id="name_medin_tutorial_adf_intro_view_employee_definition_employee_definition_CommitPageDef"
           path="name.medin.tutorial.adf.intro.view.pageDefs.employee_definition_employee_definition_CommitPageDef"/>
+    <page id="name_medin_tutorial_adf_intro_view_employee_definition_employee_definition_RollbackPageDef"
+          path="name.medin.tutorial.adf.intro.view.pageDefs.employee_definition_employee_definition_RollbackPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="name.medin.tutorial.adf.intro.model"
