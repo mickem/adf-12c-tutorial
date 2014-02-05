@@ -20,7 +20,8 @@
           <Item Value="EmployeesView"/>
         </Accessors>
       </nodeDefinition>
-      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="DepartmentsView1">
+      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="DepartmentsView1"
+                      TargetIterator="${bindings.EmployeesViewIterator}">
         <AttrNames>
           <Item Value="FirstName"/>
           <Item Value="LastName"/>
@@ -36,7 +37,8 @@
           <Item Value="EmployeesView"/>
         </Accessors>
       </nodeDefinition>
-      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="AllJobsView1">
+      <nodeDefinition DefName="name.medin.tutorial.adf.intro.model.EmployeesView" Name="AllJobsView1"
+                      TargetIterator="${bindings.EmployeesViewIterator}">
         <AttrNames>
           <Item Value="FirstName"/>
           <Item Value="LastName"/>
