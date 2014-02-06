@@ -87,7 +87,7 @@
                 </f:facet>
                 <f:facet name="start">
                     <af:panelAccordion id="pa1">
-                        <af:showDetailItem text="Departments" id="sdi1">
+                        <af:showDetailItem text="Departments" id="sdi1" stretchChildren="first">
                             <af:tree value="#{bindings.DepartmentsView.treeModel}" var="node"
                                      selectionListener="#{bindings.DepartmentsView.treeModel.makeCurrent}"
                                      rowSelection="single" id="t1">
@@ -96,7 +96,7 @@
                                 </f:facet>
                             </af:tree>
                         </af:showDetailItem>
-                        <af:showDetailItem text="Jobs" id="sdi2">
+                        <af:showDetailItem text="Jobs" id="sdi2" stretchChildren="first">
                             <af:tree value="#{bindings.AllJobsView.treeModel}" var="node"
                                      selectionListener="#{bindings.AllJobsView.treeModel.makeCurrent}"
                                      rowSelection="single" id="t2">
