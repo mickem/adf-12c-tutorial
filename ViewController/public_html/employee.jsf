@@ -27,7 +27,7 @@
                             <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
                                        id="c12">
-                                <af:image id="i1" source="#{row.Gravatar}"
+                                <af:image id="i1" source="#{row.Gravatar}?s=16"
                                           shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}"/>
                             </af:column>
                             <af:column sortProperty="#{bindings.EmployeesView.hints.FirstName.name}" filterable="true"
