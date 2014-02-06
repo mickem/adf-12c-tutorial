@@ -24,9 +24,9 @@
                                   filterModel="#{bindings.EmployeesViewQuery.queryDescriptor}"
                                   queryListener="#{bindings.EmployeesViewQuery.processQuery}" filterVisible="true"
                                   varStatus="vs" id="t3" partialTriggers=":::t2 :::t1" displayRow="selected">
-                            <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
-                                       sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
-                                       id="c12">
+                            <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="false"
+                                       sortable="false" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
+                                       id="c12" width="20">
                                 <af:image id="i1" source="#{row.Gravatar}?s=16"
                                           shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}"/>
                             </af:column>
