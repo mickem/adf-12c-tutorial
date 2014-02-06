@@ -35,11 +35,11 @@ Model Package:    | name.medin.tutorial.adf.intro.model | name.medin.tutorial.ad
 
 ### Setup git
 
-Post-sertup of git is somewhat involved.
-* In essence you need to clone the repo (dont create a project/application)
-* Create/checkout your local branch
-* Manually create the two projects (Model/View)
-* Manually create the maven application POM
+Post-sertup of git is somewhat involved but in esence you need to clone the repo and then create your own branch (from master).
+* 1.1 Clone the repo (dont create a project/application)
+* 1.2 Create/checkout your local branch
+* 1.3 Manually create the two projects (Model/View)
+* 1.4 Manually create the maven application POM
 
 ### Setup git password caching
 
