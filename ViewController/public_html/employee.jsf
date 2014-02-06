@@ -53,8 +53,8 @@
                 <f:facet name="header"/>
                 <f:facet name="end">
                     <af:panelFormLayout id="pfl1" partialTriggers="t1 t2">
-                        <af:outputText value="#{bindings.Gravatar.inputValue}"
-                                       shortDesc="#{bindings.Gravatar.hints.tooltip}" id="ot3"/>
+                        <af:image id="i2" source="#{bindings.Gravatar.inputValue}"
+                                  shortDesc="#{bindings.Gravatar.hints.tooltip}"/>
                         <af:panelLabelAndMessage label="#{bindings.FirstName.hints.label}" id="plam1">
                             <af:outputText value="#{bindings.FirstName.inputValue}"
                                            shortDesc="#{bindings.FirstName.hints.tooltip}" id="ot7"/>
