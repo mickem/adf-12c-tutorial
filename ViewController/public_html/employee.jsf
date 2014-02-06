@@ -54,7 +54,8 @@
                 <f:facet name="end">
                     <af:panelFormLayout id="pfl1" partialTriggers="t1 t2">
                         <af:image id="i2" source="#{bindings.Gravatar.inputValue}?s=200"
-                                  shortDesc="#{bindings.Gravatar.hints.tooltip}"/>
+                                  shortDesc="#{bindings.Gravatar.hints.tooltip}"
+                                  inlineStyle="width:100px; height:100px;"/>
                         <af:panelLabelAndMessage label="#{bindings.FirstName.hints.label}" id="plam1">
                             <af:outputText value="#{bindings.FirstName.inputValue}"
                                            shortDesc="#{bindings.FirstName.hints.tooltip}" id="ot7"/>
