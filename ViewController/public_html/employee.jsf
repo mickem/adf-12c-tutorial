@@ -9,7 +9,9 @@
                     <af:panelCollection id="pc1">
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
-                            <af:toolbar id="t4"/>
+                            <af:toolbar id="t4">
+                                <af:button text="Edit" id="b1"/>
+                            </af:toolbar>
                         </f:facet>
                         <f:facet name="statusbar"/>
                         <af:table value="#{bindings.EmployeesView.collectionModel}" var="row"
