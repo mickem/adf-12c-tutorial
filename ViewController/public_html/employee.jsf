@@ -10,7 +10,8 @@
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
-                                <af:button text="Edit" id="b1" action="edit"/>
+                                <af:button text="Edit" id="b1" action="edit"
+                                           icon="#{resource['images:user_edit.png']}"/>
                             </af:toolbar> 
                         </f:facet> 
                         <f:facet name="statusbar"/>
