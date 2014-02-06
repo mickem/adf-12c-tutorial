@@ -5,7 +5,9 @@
     <transaction>
       <new-transaction/>
     </transaction>
-    <view id="edit"></view>
+    <view id="edit">
+      <page>/edit.jsf</page>
+    </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
       <outcome>

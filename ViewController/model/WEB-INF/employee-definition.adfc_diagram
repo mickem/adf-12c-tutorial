@@ -7,6 +7,8 @@
       <property
          name="activityId">edit</property>
       <property
+         name="page">/edit.jsf</property>
+      <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>edit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>

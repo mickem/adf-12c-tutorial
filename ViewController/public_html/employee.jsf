@@ -10,7 +10,7 @@
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
-                                <af:button text="Edit" id="b1"/>
+                                <af:button text="Edit" id="b1" action="edit"/>
                             </af:toolbar>
                         </f:facet>
                         <f:facet name="statusbar"/>
