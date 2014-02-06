@@ -91,6 +91,7 @@
                                     <af:button actionListener="#{bindings.Last.execute}" text="Last"
                                                disabled="#{!bindings.Last.enabled}" partialSubmit="true" id="b4"/>
                                 </af:panelGroupLayout>
+                                <af:button text="Cancel" id="b6" action="cancel"/>
                                 <af:button text="Save" id="b5" action="save"/>
                             </af:panelGroupLayout>
                         </f:facet>
