@@ -11,8 +11,8 @@
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
                                 <af:button text="Edit" id="b1" action="edit"/>
-                            </af:toolbar>
-                        </f:facet>
+                            </af:toolbar> 
+                        </f:facet> 
                         <f:facet name="statusbar"/>
                         <af:table value="#{bindings.EmployeesView.collectionModel}" var="row"
                                   rows="#{bindings.EmployeesView.rangeSize}"
@@ -24,6 +24,12 @@
                                   filterModel="#{bindings.EmployeesViewQuery.queryDescriptor}"
                                   queryListener="#{bindings.EmployeesViewQuery.processQuery}" filterVisible="true"
                                   varStatus="vs" id="t3" partialTriggers=":::t2 :::t1" displayRow="selected">
+                            <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
+                                       id="c12">
+                                <af:image id="i1" source="#{row.Gravatar}"
+                                          shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}"/>
+                            </af:column>
                             <af:column sortProperty="#{bindings.EmployeesView.hints.FirstName.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.EmployeesView.hints.FirstName.label}"
                                        id="c2">
@@ -40,12 +46,6 @@
                                        sortable="true" headerText="#{bindings.EmployeesView.hints.Email.label}" id="c4">
                                 <af:outputText value="#{row.Email}"
                                                shortDesc="#{bindings.EmployeesView.hints.Email.tooltip}" id="ot6"/>
-                            </af:column>
-                            <af:column sortProperty="#{bindings.EmployeesView.hints.Gravatar.name}" filterable="true"
-                                       sortable="true" headerText="#{bindings.EmployeesView.hints.Gravatar.label}"
-                                       id="c12">
-                                <af:outputText value="#{row.Gravatar}"
-                                               shortDesc="#{bindings.EmployeesView.hints.Gravatar.tooltip}" id="ot11"/>
                             </af:column>
                         </af:table>
                     </af:panelCollection>
