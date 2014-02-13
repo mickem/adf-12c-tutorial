@@ -6,7 +6,6 @@ It is designed to be a bit less point-n-click and more "think for your self". Th
 The tutorial is open ended so your solution might differ from mine but the idea is to have fun and learn a bit about ADF along the process.
 The tutorial assumes basic ADF and google skills as there is not much in explinations.
 
-The enviornment can be found as a vagrant image here: https://github.com/mickem/adf-12c-enviornment
 
 The assignments are divided up in three basic areas:
 
@@ -23,5 +22,31 @@ Many of the assignments require you to checkout various tags in git and fixing i
 FIY: This is a work in progress and will be finnished in the next few weeks.
 The first section is in progress and will be finnished soon.
 
-Here follows some instruction to fork this repo and connect it with ADF
-Do you have a GitHub account? If not start here: https://github.com/signup 
+Setting up the virtual machine
+------------------------------
+
+The enviornment can be found as a vagrant image here: https://github.com/mickem/adf-12c-enviornment
+
+
+Setting up the code repo
+------------------------
+
+You can oen the git repo from jdeveloper by checking it out as a new application.
+
+
+Starting an assignmnt
+---------------------
+
+Before you start an assignment it is a good idea to always start from a given tag.
+The best way to do tis is to:
+
+```
+it checkout model.1.0-done -B mywork
+```
+
+If your current branch is not clean you can fix this by reseting it before:
+```
+git reset --hard HEAD
+```  
+
+The avalible tags can be found by checking releases here on github.
