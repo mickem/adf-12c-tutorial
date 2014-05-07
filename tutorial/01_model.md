@@ -185,9 +185,18 @@ The next step is to turn the database interface into a working usable model. Ple
 * 6.2.	Why should you not use the text ?salary? in the error message for the validation rule?
 * 6.3.	What should you use instead?
 
-## 7.0 Adding objects by hand
+## 7.0 Adding missing entity
 
-Next up we need to add a missing table (LOCATION) to the application.
-Do this by manually add the entity and view as well as the relationship.
+Next up we need to add a missing table (LOCATIONS) to the application.
+Do this by manually add the entity and make sure view as well as the relationship are setup as well.
+Make sure we can use the Locations/Department parent child object.
 
-* 7.1
+### Hints
+
+* 7.1 Add new entity object
+* 7.1 Browse and select LOCATIONS
+* 7.1 Dont forget to add a VIew Object
+* 7.2 Expose the Locations/Department map in the application module
+* 7.2 Remember to rename the fields as before
+
+
