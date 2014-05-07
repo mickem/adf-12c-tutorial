@@ -66,6 +66,13 @@
     AssociationOtherEnd="name.medin.tutorial.adf.intro.model.EmpDeptFkAssoc.Departments1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Locations"
+    Association="name.medin.tutorial.adf.intro.model.DeptLocFkAssoc"
+    AssociationEnd="name.medin.tutorial.adf.intro.model.DeptLocFkAssoc.Locations"
+    AssociationOtherEnd="name.medin.tutorial.adf.intro.model.DeptLocFkAssoc.Departments"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="DeptIdPk"
     PrimaryKey="true">
