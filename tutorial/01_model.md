@@ -23,6 +23,9 @@ Model Package:    | name.medin.tutorial.adf.intro.model | name.medin.tutorial.ad
 
 * 1.1 Create the application i JDeveloper
 * 1.2 Connect the application to the master git on a private branch from master.
+* 1.3 Extend the employees EMAIL field to be longer so a real email address can fit. (255 chars)
+* 1.3 You can execute SQL commands from a SQL Worksheet in JDeveloper on the database connection
+* 1.4 ALTER TABLE EMPLOYEES MODIFY (EMAIL VARCHAR(255))
 
 ### Questions
 
@@ -36,10 +39,12 @@ Model Package:    | name.medin.tutorial.adf.intro.model | name.medin.tutorial.ad
 ### Setup git
 
 Post-sertup of git is somewhat involved but in esence you need to clone the repo and then create your own branch (from master).
-* g.1.1 Clone the repo (dont create a project/application)
-* g.1.2 Create/checkout your local branch
-* g.1.3 Manually create the two projects (Model/View)
-* g.1.4 Manually create the maven application POM
+* g.1 Manually create the two projects (Model/View)
+* g.2 Manually create the maven application POM
+* g.3 Run git init and add origin
+* g.4 Stash your changes
+* g.5 fetch and branch from master
+* g.6 stash pop your changes and continue with the assignment.
 
 ### Setup git password caching
 
@@ -60,9 +65,11 @@ Database user:     | HR
 Database password: | manager
 Tables:            | EMPLOYEES, DEPARTMENTS
 
-### Instructions
+### Hints
 
-* 2.1 Create the modle inside JDeveloper
+* 2.1 Create objects from tables.
+* 2.2 Dont forget to add the tables.
+* 2.3 Dont forget to add the application module
 
 ### Questions
 
@@ -78,7 +85,7 @@ ADF does a rather good job of a terrible situation.
 There are several relations between Employee and Department but there is no meta information to describe what those relationships are.
 Thus we will need to clean up the default relations.
 
-### Instructions
+### Hints
  
 * 3.1.	Rename the root DepartmentsView1 to DepartmentsView.
 * 3.2.	Rename the root ExmployeesView1 to ExmployeesView.
@@ -97,9 +104,10 @@ Thus we will need to clean up the default relations.
 Next up we want to take our model for a spin. Yes we can execute and work with the model as-is without first creating a UI. 
 This is I think a very cool feature of ADF-BC.
 
-### Instructions
+### Hints
 
 * 4.1 Click run the Application Module and don't forget the password for the database is manager.
+* 4.1 Test, adding, removing, etc etc...
  
 ### Questions
 
@@ -177,3 +185,9 @@ The next step is to turn the database interface into a working usable model. Ple
 * 6.2.	Why should you not use the text ?salary? in the error message for the validation rule?
 * 6.3.	What should you use instead?
 
+## 7.0 Adding objects by hand
+
+Next up we need to add a missing table (LOCATION) to the application.
+Do this by manually add the entity and view as well as the relationship.
+
+* 7.1
