@@ -200,3 +200,11 @@ Make sure we can use the Locations/Department parent child object.
 * 7.2 Remember to rename the fields as before
 
 
+## 8.0 Create a web servce
+
+Expose the AllJobsView as a web service to allow users to search for jobs.
+
+### Hints
+
+* 8.1 You can create web services on the Application Module
+* 8.1 The webservice cannot be executed in the test client so we need to wait to test it.
