@@ -7,6 +7,9 @@
   Version="12.1.2.66.68"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="4096"/>
+  </DesignTime>
   <ViewUsage
     Name="DepartmentsView"
     ViewObjectName="name.medin.tutorial.adf.intro.model.DepartmentsView"/>
@@ -55,4 +58,19 @@
     SrcViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.LocationsView"
     DstViewUsageName="name.medin.tutorial.adf.intro.model.AppModule.DepartmentsInLocation"
     Reversed="false"/>
+  <Remote
+    Name="ServiceInterface"
+    ServerClassName="name.medin.tutorial.adf.intro.model.server.serviceinterface.AppModuleServiceImpl"
+    ServerInterfaceName="name.medin.tutorial.adf.intro.model.common.serviceinterface.AppModuleService">
+    <DesignTime>
+      <Attr Name="_webServiceName" Value="AppModuleService"/>
+      <Attr Name="_targetNameSpace" Value="/name/medin/tutorial/adf/intro/model/common/"/>
+    </DesignTime>
+  </Remote>
+  <ServiceViewUsage
+    ViewUsageName="AllJobsView">
+    <DesignTime>
+      <Attr Name="_FindOpName" Value="findAllJobsView"/>
+    </DesignTime>
+  </ServiceViewUsage>
 </AppModule>

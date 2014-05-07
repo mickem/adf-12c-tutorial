@@ -46,6 +46,11 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="name.medin.tutorial.adf.intro.model"/>
+   <hash n="ejbModuleContainer">
+      <url n="ejbJarNodeURL" path="src/META-INF/ejb-jar.xml"/>
+      <value n="ejbVersion" v="3.0"/>
+      <url n="weblogicEjbJarNodeURL" path="src/META-INF/weblogic-ejb-jar.xml"/>
+   </hash>
    <value n="jbo.JpxName" v="name.medin.tutorial.adf.intro.model.Model"/>
    <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
@@ -53,10 +58,15 @@
       <list n="technologyScope">
          <string v="ADFbc"/>
          <string v="ADFbc-Modeling"/>
+         <string v="EJB"/>
          <string v="Java"/>
          <string v="Java-Modeling"/>
          <string v="Maven"/>
+         <string v="WSDL"/>
+         <string v="WSPolicy"/>
+         <string v="WebServices"/>
          <string v="XML"/>
+         <string v="XML_SCHEMA"/>
       </list>
    </hash>
    <value n="oracle.jbo.SavedPreferences" v="true"/>
@@ -219,6 +229,18 @@
             <value n="id" v="ADF Common Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="BC4J Service Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JAX-WS Web Services"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -255,6 +277,18 @@
          </hash>
          <hash>
             <value n="id" v="ADF Common Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Service Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JAX-WS Web Services"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

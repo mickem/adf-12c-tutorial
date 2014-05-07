@@ -12,5 +12,11 @@
          <Security AppModuleJndiName="name.medin.tutorial.adf.intro.model.AppModule"/>
          <Custom ns0:JDBCDataSource="java:comp/env/jdbc/HRDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
       </AppModuleConfig>
+      <AppModuleConfig name="AppModuleService" jbo.project="name.medin.tutorial.adf.intro.model.Model" ApplicationName="name.medin.tutorial.adf.intro.model.AppModule" DeployPlatform="SI">
+         <AM-Pooling jbo.ampool.resetnontransactionalstate="true"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="name.medin.tutorial.adf.intro.model.AppModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/HRDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
    </AppModuleConfigBag>
 </BC4JConfig>

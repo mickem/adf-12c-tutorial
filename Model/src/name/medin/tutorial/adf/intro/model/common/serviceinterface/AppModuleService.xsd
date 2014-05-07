@@ -1,0 +1,21 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/name/medin/tutorial/adf/intro/model/common/types/"
+     xmlns:tns="/name/medin/tutorial/adf/intro/model/common/types/" xmlns:ns0="/name/medin/tutorial/adf/intro/model/common/"
+     xmlns:ns1="http://xmlns.oracle.com/adf/svc/types/">
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd"/>
+    <import namespace="/name/medin/tutorial/adf/intro/model/common/" schemaLocation="../AllJobsViewSDO.xsd"/>
+    <element name="findAllJobsView">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns1:FindCriteria"/>
+                <element name="findControl" type="ns1:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findAllJobsViewResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:AllJobsViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
