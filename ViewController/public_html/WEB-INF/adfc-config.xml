@@ -23,4 +23,9 @@
       <to-activity-id>employee</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
+  <managed-bean id="__5">
+    <managed-bean-name>EmployeeHelper</managed-bean-name>
+    <managed-bean-class>name.medin.tutorial.adf.intro.view.EmployeeHelper</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
