@@ -5,6 +5,11 @@
     <transaction>
       <new-transaction/>
     </transaction>
+    <input-parameter-definition id="__3">
+      <name>action</name>
+      <value>#{pageFlowScope.action}</value>
+      <required/>
+    </input-parameter-definition>
     <view id="edit">
       <page>/edit.jsf</page>
     </view>

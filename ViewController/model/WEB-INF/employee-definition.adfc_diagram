@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">R45,279.8813,228.82184,519.6187,140.59375,L50</property>
+         name="sdm:polyPoints">R46,279.0,229.33691,520.5,140.22754,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall7">
@@ -63,7 +63,7 @@
       <property
          name="fromOutcome">cancel</property>
       <property
-         name="sdm:polyPoints">R55,279.8813,237.58441,515.6187,384.53125,L50</property>
+         name="sdm:polyPoints">R54,279.0,236.33691,516.5,384.16504,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn9">
@@ -88,7 +88,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">B50,561.5,195.47505,626.1187,268.0625,L50</property>
+         name="sdm:polyPoints">B50,561.5,194.22754,627.0,264.1963,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -98,6 +98,6 @@
       <property
          name="fromOutcome">Rollback</property>
       <property
-         name="sdm:polyPoints">T50,557.5,329.64996,626.1187,272.4438,L55</property>
+         name="sdm:polyPoints">T50,557.5,330.16504,627.0,271.1963,L54</property>
    </ControlFlowCase>
 </SDM>
