@@ -10,6 +10,7 @@
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
+                                <af:button text="Add" id="b2" icon="#{resource['images:user_add.png']}"/>
                                 <af:button text="Edit" id="b1" action="edit"
                                            icon="#{resource['images:user_edit.png']}"/>
                             </af:toolbar> 
