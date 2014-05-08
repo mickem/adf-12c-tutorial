@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['name.medin.tutorial.adf.intro.view.ViewControllerBundle']}"/>
     <af:document title="employee.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -10,21 +12,21 @@
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
-                                <af:button text="Add" id="b2" icon="#{resource['images:user_add.png']}" action="edit">
+                                <af:button text="#{viewcontrollerBundle.Add}" id="b2" icon="#{resource['images:user_add.png']}" action="edit">
                                     <af:setPropertyListener from='#{"create"}' to="#{EmployeeHelper.action}"
                                                             type="action"/>
                                 </af:button>
-                                <af:button text="Edit" id="b1" action="edit"
+                                <af:button text="#{viewcontrollerBundle.Edit}" id="b1" action="edit"
                                            icon="#{resource['images:user_edit.png']}">
                                     <af:setPropertyListener from='#{"edit"}' to="#{EmployeeHelper.action}"
                                                             type="action"/>
                                 </af:button>
-                                <af:selectOneChoice label="View" id="soc1"
+                                <af:selectOneChoice label="#{viewcontrollerBundle.View}" id="soc1"
                                                     valueChangeListener="#{EmployeeHelper.ApplyCriteria}"
                                                     autoSubmit="true">
-                                    <af:selectItem label="All" value="All Queryable Attributes" id="si1"/>
-                                    <af:selectItem label="No managers" value="NoManagers" id="si2"/>
-                                    <af:selectItem label="No Direct reports" value="NoDirectReports" id="si3"/>
+                                    <af:selectItem label="#{viewcontrollerBundle.All}" value="All Queryable Attributes" id="si1"/>
+                                    <af:selectItem label="#{viewcontrollerBundle.Nomanagers}" value="NoManagers" id="si2"/>
+                                    <af:selectItem label="#{viewcontrollerBundle.NoDirectreports}" value="NoDirectReports" id="si3"/>
                                 </af:selectOneChoice>
                             </af:toolbar> 
                         </f:facet> 
@@ -103,7 +105,7 @@
                 </f:facet>
                 <f:facet name="start">
                     <af:panelAccordion id="pa1">
-                        <af:showDetailItem text="Departments" id="sdi1" stretchChildren="first">
+                        <af:showDetailItem text="#{viewcontrollerBundle.Departments}" id="sdi1" stretchChildren="first">
                             <af:tree value="#{bindings.DepartmentsView.treeModel}" var="node"
                                      selectionListener="#{bindings.DepartmentsView.treeModel.makeCurrent}"
                                      rowSelection="single" id="t1">
@@ -112,7 +114,7 @@
                                 </f:facet>
                             </af:tree>
                         </af:showDetailItem>
-                        <af:showDetailItem text="Jobs" id="sdi2" stretchChildren="first">
+                        <af:showDetailItem text="#{viewcontrollerBundle.Jobs}" id="sdi2" stretchChildren="first">
                             <af:tree value="#{bindings.AllJobsView.treeModel}" var="node"
                                      selectionListener="#{bindings.AllJobsView.treeModel.makeCurrent}"
                                      rowSelection="single" id="t2">
