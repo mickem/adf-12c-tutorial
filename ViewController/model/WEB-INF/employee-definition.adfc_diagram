@@ -9,15 +9,15 @@
       <property
          name="page">/edit.jsf</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>edit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>edit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">233.1875</property>
+         name="y">155.48633</property>
       <property
-         name="x">238.0</property>
+         name="x">344.0</property>
    </View>
    <MethodCall
       id="MethodCall3">
@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">R46,279.0,229.33691,520.5,140.22754,L50</property>
+         name="sdm:polyPoints">R46,385.0,151.63574,520.5,140.22754,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall7">
@@ -51,9 +51,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">384.51562</property>
+         name="y">273.81445</property>
       <property
-         name="x">557.5</property>
+         name="x">561.5</property>
    </MethodCall>
    <ControlFlowCase
       islink="true"
@@ -63,7 +63,7 @@
       <property
          name="fromOutcome">cancel</property>
       <property
-         name="sdm:polyPoints">R54,279.0,236.33691,516.5,384.16504,L50</property>
+         name="sdm:polyPoints">R54,385.0,158.63574,520.5,273.46387,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn9">
@@ -76,9 +76,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">268.04688</property>
+         name="y">255.3457</property>
       <property
-         name="x">668.0</property>
+         name="x">890.0</property>
    </TaskFlowReturn>
    <ControlFlowCase
       islink="true"
@@ -88,7 +88,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">B50,561.5,194.22754,627.0,264.1963,L46</property>
+         name="sdm:polyPoints">R50,602.5,140.22754,849.0,251.49512,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -98,6 +98,64 @@
       <property
          name="fromOutcome">Rollback</property>
       <property
-         name="sdm:polyPoints">T50,557.5,330.16504,627.0,271.1963,L54</property>
+         name="sdm:polyPoints">R50,602.5,273.46387,849.0,258.49512,L54</property>
+   </ControlFlowCase>
+   <Router
+      id="Router21">
+      <property
+         name="activityId">createOrEdit</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createOrEdit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Router&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">166.19531</property>
+      <property
+         name="x">88.0</property>
+   </Router>
+   <MethodCall
+      id="MethodCall22">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">335.74707</property>
+      <property
+         name="x">343.01465</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase23"
+      from="Router21"
+      to="View2">
+      <property
+         name="fromOutcome">edit</property>
+      <property
+         name="sdm:polyPoints">R46,129.0,162.34473,303.0,155.13574,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase24"
+      from="Router21"
+      to="MethodCall22">
+      <property
+         name="fromOutcome">create</property>
+      <property
+         name="sdm:polyPoints">R54,129.0,169.34473,302.01465,335.39648,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="MethodCall22"
+      to="View2">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">T50,343.01465,281.39648,344.0,209.13574,B50</property>
    </ControlFlowCase>
 </SDM>
