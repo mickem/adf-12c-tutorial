@@ -10,9 +10,15 @@
                         <f:facet name="menus"/>
                         <f:facet name="toolbar">
                             <af:toolbar id="t4">
-                                <af:button text="Add" id="b2" icon="#{resource['images:user_add.png']}"/>
+                                <af:button text="Add" id="b2" icon="#{resource['images:user_add.png']}" action="edit">
+                                    <af:setPropertyListener from='#{"create"}' to="#{EmployeeHelper.action}"
+                                                            type="action"/>
+                                </af:button>
                                 <af:button text="Edit" id="b1" action="edit"
-                                           icon="#{resource['images:user_edit.png']}"/>
+                                           icon="#{resource['images:user_edit.png']}">
+                                    <af:setPropertyListener from='#{"edit"}' to="#{EmployeeHelper.action}"
+                                                            type="action"/>
+                                </af:button>
                             </af:toolbar> 
                         </f:facet> 
                         <f:facet name="statusbar"/>
