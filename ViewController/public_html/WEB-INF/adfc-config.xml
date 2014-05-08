@@ -8,6 +8,10 @@
       <document>/WEB-INF/employee-definition.xml</document>
       <id>employee-definition</id>
     </task-flow-reference>
+    <input-parameter id="__6">
+      <name>action</name>
+      <value>#{EmployeeHelper.action}</value>
+    </input-parameter>
   </task-flow-call>
   <control-flow-rule id="__1">
     <from-activity-id>employee</from-activity-id>
