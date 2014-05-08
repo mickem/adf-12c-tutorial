@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">employee</property>
+      <property
+         name="page">/employee.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>employee&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">301.5625</property>
+      <property
+         name="x">179.5</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="taskFlowId">employee-definition</property>
+      <property
+         name="activityId">employee-definition</property>
+      <property
+         name="documentReference">/WEB-INF/employee-definition.xml</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>employee-definition&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">307.54688</property>
+      <property
+         name="x">478.02344</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">edit</property>
+      <property
+         name="sdm:polyPoints">R50,220.5,301.57812,437.02344,307.5625,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="TaskFlowCall3"
+      to="View2">
+      <property
+         name="fromOutcome">return</property>
+      <property
+         name="sdm:polyPoints">L54,436.9267,311.0625,220.5,305.07812,R54</property>
+   </ControlFlowCase>
+</SDM>

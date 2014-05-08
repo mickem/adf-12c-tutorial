@@ -211,7 +211,7 @@
     AliasName="VIEW_ATTR"
     SQLType="VARCHAR">
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
-    <TransientExpression><![CDATA["http://gravtar.com/avatar/" + new BigInteger(1, java.security.MessageDigest.getInstance("MD5").digest(Email.getBytes("UTF-8"))).toString(16)]]></TransientExpression>
+    <TransientExpression><![CDATA["http://gravatar.com/avatar/" + new BigInteger(1, java.security.MessageDigest.getInstance("MD5").digest(Email.getBytes("UTF-8"))).toString(16)]]></TransientExpression>
   </ViewAttribute>
   <ViewAttribute
     Name="DirectReports"
