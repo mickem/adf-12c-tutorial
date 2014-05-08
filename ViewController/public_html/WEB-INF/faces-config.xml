@@ -3,4 +3,9 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
   </application>
+  <managed-bean>
+    <managed-bean-name>EmployeeHelper</managed-bean-name>
+    <managed-bean-class>name.medin.tutorial.adf.intro.view.EmployeeHelper</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </faces-config>
