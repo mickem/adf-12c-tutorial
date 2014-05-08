@@ -19,6 +19,13 @@
                                     <af:setPropertyListener from='#{"edit"}' to="#{EmployeeHelper.action}"
                                                             type="action"/>
                                 </af:button>
+                                <af:selectOneChoice label="View" id="soc1"
+                                                    valueChangeListener="#{EmployeeHelper.ApplyCriteria}"
+                                                    autoSubmit="true">
+                                    <af:selectItem label="All" value="All Queryable Attributes" id="si1"/>
+                                    <af:selectItem label="No managers" value="NoManagers" id="si2"/>
+                                    <af:selectItem label="No Direct reports" value="NoDirectReports" id="si3"/>
+                                </af:selectOneChoice>
                             </af:toolbar> 
                         </f:facet> 
                         <f:facet name="statusbar"/>
